@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lunchSelector.lunchMapper">
+	<resultMap type="domain.LunchDomain" id="lunchResult">
+		<result column="name" property="name"/>
+		<result column="some_desc" property="someDesc"/>
+		<result column="addr" property="addr"/>
+		<result column="avg_price" property="avgPrice"/>
+	</resultMap>
+
+  <select id="selectTotalCnt" resultType="Integer">
+    SELECT COUNT(*) 
+    FROM near_restaurant
+  </select>
+  <select id="selectLunch" resultMap="lunchResult" parameterType="int">
+    SELECT name, some_desc, addr, avg_price
+		FROM (SELECT rownum r, name, some_desc, addr, avg_price
+					FROM near_restaurant)
+		WHERE r=#{idx}
+  </select>
+</mapper>

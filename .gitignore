@@ -1,2 +1,8 @@
 # eXERD 제외
 /ERD/*
+/build/
+
+# eclipse setting 제외
+.classpath
+.project
+.settings/*
