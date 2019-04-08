@@ -67,19 +67,19 @@
   <div class="container">
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 	  <h1 class="display-4">점심 뭐먹지..</h1>
-	  <p class="lead">🍚고민말고 돌리고 가세요!</p>
+	  <p class="lead">🍚고민말고 가즈아!</p>
 	</div>
   <div class="row">
     <div class="col-12">
       <div class="row no-gutters border rounded flex-md-row position-relative" style="height:500px;">
         <div class="col-6 p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">점심 메뉴 :</strong>
+          <strong class="d-inline-block mb-2 text-primary">오늘의 메뉴</strong>
           <h3 class="mb-0"><c:out value="${ ld.name }"/></h3>
           <div class="mb-1 text-muted">평균 가격대 : <c:out value="${ ld.avgPrice }"/>원</div>
           <p class="card-text mb-auto">
-          	<c:out value="${ ld.someDesc }"/>
+          	<c:out value="${ ld.someDesc }" escapeXml="false"/>
           </p>
-          <a href="main.do" class="stretched-link">다시 랜덤 가즈아!</a>
+          <a href="main.do" class="stretched-link">이건 어제도 먹었잖어!</a>
         </div>
         <div class="col-6 d-none d-lg-block">
 					<div id="map" style="width:100%;height:100%;"></div>
