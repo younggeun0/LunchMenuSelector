@@ -1,6 +1,4 @@
-# LunchSelector
-
-## 🍚점심 메뉴 선택기(Web Toy Project)
+# 🍚점심 메뉴 선택기(
 
 * Bootstrap, MyBatis, 카카오 지도 API 사용
 * DB에 등록된 전체 밥집 수를 카운트, 랜덤한 밥집을 선택후 결과 출력
